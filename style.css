@@ -1,0 +1,237 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #ffffffcb;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select,
+input[type="file"],
+input[type="tel"],
+input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    /* Align radio buttons and labels vertically */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio-group label {
+    margin-bottom: 0;
+    /* margin-left: px; */
+    /* Remove extra margin from labels */
+}
+
+.dob-group {
+    display: flex;
+}
+
+.dob-group input[type="text"] {
+    flex: 1;
+    margin-right: 5px;
+}
+
+button {
+    display: block;
+    width: 50%;
+    /* Center the button */
+    margin: 0 auto;
+    /* Center the button */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Remove border for file input */
+input[type="file"] {
+    border: none;
+    outline: none;
+    /* Optional: Hide default file input button */
+    overflow: hidden;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-group {
+    display: flex;
+}
+
+.name-field {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.name-field:last-child {
+    margin-right: 0;
+}
+
+.name-field {
+    flex: 1;
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
+
+.name-field:last-child {
+    margin-right: 0;
+}
+
+
+
+.period-group {
+    display: flex;
+    align-items: center;
+}
+
+.period-group input[type="text"] {
+    flex: 1;
+}
+
+.period-group span {
+    margin-left: 10px;
+}
+
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.specified-test-group select {
+    width: 48%;
+    display: inline-block;
+    margin-right: 2%;
+
+}
+
+.specified-test-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vision-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.vision-input {
+    flex: 1;
+}
+
+.vision-space {
+    width: 20px;
+    /* Adjust the width as needed for the desired space */
+}
+
+/* CSS to display checkboxes horizontally */
+.checkbox-group input[type="checkbox"],
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+    /* Adjust as needed for spacing between checkboxes */
+}
+
+.checkbox-group label {
+    display: inline-block;
+    /* margin-right: 10px; Adjust as needed for spacing between checkboxes */
+}
+
+.education-group {
+    display: flex;
+}
+
+.education-field {
+    flex: 1;
+    margin-right: 20px;
+    /* Adjust as needed */
+}
+
+.education-field:last-child {
+    margin-right: 0;
+}
+
+.section-border {
+    border: 1px solid #000;
+    /* Adjust border color and thickness as needed */
+    padding: 10px;
+    /* Adjust padding as needed */
+}
+
+.section-border {
+    border: 1px solid #ccc;
+    /* Adjust border color and thickness as needed */
+    padding: 10px;
+    /* Adjust padding as needed */
+    border-radius: 1px;
+    border-style: solid;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.add-more {
+    cursor: pointer;
+    color: blue;
+}
+
+.work-group {
+    display: flex;
+}
+
+.work-field {
+    flex: 1;
+    margin-right: 20px;
+    /* Adjust as needed */
+}
+
+.work-field:last-child {
+    margin-right: 0;
+}

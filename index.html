@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Information Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Basic Information -->
+        <form id="basic-info-form">
+            <h2>基本情報/Basic Information</h2>
+            <div class="form-group">
+                <label for="name">氏名(カタカナ)/Name in Katakana:</label>
+                <div class="name-group">
+                    <div class="name-field">
+                        <label for="first-name">氏:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="name-field">
+                        <label for="last-name">名</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">氏名(ローマ字)/Name in Roman:</label>
+                <div class="name-group">
+                    <div class="name-field">
+                        <label for="first-name">Family name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="name-field">
+                        <label for="last-name">Given name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">性別/Sex:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">男/Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">女/Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nationality">国類/Nationality:</label>
+                <div class="select-group">
+                    <select id="nationality" name="nationality" required>
+                        <option value="" disabled selected>Select Nationality</option>
+                        <option value="myanmar">ミャンマー/Myanmar</option>
+                        <option value="indonesia">インドネシア/Indonesia</option>
+                        <option value="nepal">ネパール/Nepal</option>
+                        <option value="philippines">フィリピンPhilippines</option>
+                        <option value="vietnam">ベトナム/Viet Nam</option>
+                        <option value="thai">タイ/Thailand</option>
+                        <option value="malay">マレーシア/Malaysia</option>
+                        <option value="mongo">モンゴル/Mongolia</option>
+                        <option value="india">インド/India</option>
+                        <option value="bangladesh">バングラデシュ/Bangladesh</option>
+                        <option value="srilanka" >スリランカ/Sri Lanka</option>
+                        <option value="pakistan">パキスタン/Pakistan</option>
+                        <option value="singapore">シンガポール/Singapore</option>
+                        <option value="cambodia">カンボジア/Cambodia</option>
+                        <option value="laos">ラオス/Laos</option>
+                        <option value="china">中華人民共和国/China</option>
+                        <option value="korea">大韓民国/Korea</option>
+                        <option value="us">台湾/Taiwan </option>
+                        <option value="uk">日本/Japan</option>
+                        <option value="ca">その他/( )</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="place-of-birth">出生地/Place of Birth:</label>
+                <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Place of Birth" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">生年月日/Date of Birth:</label>
+                <div class="dob-group">
+                    <input type="text" id="year" name="year" placeholder="YYYY" maxlength="4" required>
+                    <input type="text" id="month" name="month" placeholder="MM" maxlength="2" required>
+                    <input type="text" id="day" name="day" placeholder="DD" maxlength="2" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="religion">宗教/Religion:</label>
+                <input type="text" id="religion" name="religion" placeholder="Religion" required>
+            </div>
+            <div class="form-group">
+                <label for="marital-status">配偶者の有無/Marital Status:</label>
+                <div class="radio-group">
+                    <input type="radio" id="single" name="marital-status" value="single" required>
+                    <label for="single">無/Single</label>
+                    <input type="radio" id="married" name="marital-status" value="married" required>
+                    <label for="married">有/Married</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="present-address">現住所/Present Address:</label>
+                <textarea id="present-address" name="present-address" placeholder="Present Address" rows="4"
+                    required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tel-no">電話番号/Tel No:</label>
+                <input type="tel" id="tel-no" name="tel-no" placeholder="Tel No" required>
+            </div>
+            <div class="form-group">
+                <label for="mail-address">メールアドレス/Mail Address:</label>
+                <input type="email" id="mail-address" name="mail-address" placeholder="Mail Address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <button id="next-skills1">次へ/Next</button>
+        </form>
+
+        <!-- Skills and Abilities Form -->
+        <form id="skills-form" style="display: none;">
+            <h2>Skills and Abilities</h2>
+            <div class="form-group">
+                <label for="height">身長/Height:</label>
+                <input type="text" id="height" name="height" placeholder="Height (cm)" required>
+            </div>
+            <div class="form-group">
+                <label for="vision">視力/Vision:</label>
+                <div class="vision-group">
+                    <div class="vision-input">
+                        <label for="left-eye-vision">左/Left:</label>
+                        <input type="text" id="left-eye-vision" name="left-eye-vision" placeholder="Left Eye" required>
+                    </div>
+                    <div class="vision-space"></div> <!-- Space between inputs -->
+                    <div class="vision-input">
+                        <label for="right-eye-vision">右/Right:</label>
+                        <input type="text" id="right-eye-vision" name="right-eye-vision" placeholder="Right Eye"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="weight">体重/Weight:</label>
+                <input type="text" id="weight" name="weight" placeholder="Weight (kg)" required>
+            </div>
+            <div class="form-group">
+                <label>利き手/Handedness:</label>
+                <div class="radio-group">
+                    <input type="radio" id="left-handed" name="handedness" value="left" required>
+                    <label for="left-handed">左/Left</label>
+                    <input type="radio" id="right-handed" name="handedness" value="right" required>
+                    <label for="right-handed">右/Right</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>色覚異常/Color Abnormality:</label>
+                <div class="radio-group">
+                    <input type="radio" id="normal-color-vision" name="color-vision" value="normal" required>
+                    <label for="normal-color-vision">有/Yes</label>
+                    <input type="radio" id="color-blind" name="color-vision" value="color-blind" required>
+                    <label for="color-blind">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>タバコを吸っているか/Smoking?:</label>
+                <div class="radio-group">
+                    <input type="radio" id="smoker" name="smoking" value="yes" required>
+                    <label for="smoker">有/Yes</label>
+                    <input type="radio" id="non-smoker" name="smoking" value="no" required>
+                    <label for="non-smoker">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="blood-type">血液型/Blood Type:</label>
+                <input type="text" id="blood-type" name="blood-type" placeholder="Blood Type" required>
+            </div>
+            <div class="form-group">
+                <label>眼鏡/Glasses:</label>
+                <div class="radio-group">
+                    <input type="radio" id="wearing-glasses" name="glasses" value="yes" required>
+                    <label for="wearing-glasses">有/Yes</label>
+                    <input type="radio" id="not-wearing-glasses" name="glasses" value="no" required>
+                    <label for="not-wearing-glasses">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>お酒を飲んでいるか/Drink Alcohol?:</label>
+                <div class="radio-group">
+                    <input type="radio" id="drinker" name="alcohol" value="yes" required>
+                    <label for="drinker">有/Yes</label>
+                    <input type="radio" id="non-drinker" name="alcohol" value="no" required>
+                    <label for="non-drinker">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="period">日本語/Japanese:</label>
+                <div class="period-group">
+                    <span>勉強時間/Period</span>
+                    <input type="text" id="period" name="period" placeholder="Period" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="japanese-exam">日本語試験名/Japanese Exam Name:</label>
+                <select id="japanese-exam" name="japanese-exam" required>
+                    <option value="" disabled selected>Select Japanese Exam</option>
+                    <option value="jlpt">JLPT</option>
+                    <option value="eju">JFT-Basic</option>
+                    <option value="nat">NAT-Test</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="japanese-qualification">日本語資格/Japanese Qualification:</label>
+                <select id="japanese-qualification" name="japanese-qualification" required>
+                    <option value="" disabled selected>Select Japanese Qualification</option>
+                    <option value="n1">N1</option>
+                    <option value="n2">N2</option>
+                    <option value="n3">N3</option>
+                    <option value="n4">N4</option>
+                    <option value="n5">N5</option>
+                    <option value="n1">A1</option>
+                    <option value="n2">A2</option>
+                    <option value="n3">B1</option>
+                    <option value="n4">B2</option>
+                    <option value="n5">C1</option>
+                    <option value="n1">C2</option>
+                    <option value="n2">1級</option>
+                    <option value="n3">2級</option>
+                    <option value="n4">3級</option>
+                    <option value="n5">4級</option>
+                    <option value="n5">5級</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specified-test">特定技能試験/Specified Skilled Worker Test:</label>
+                <div class="specified-test-group">
+                    <select id="test" name="test" required>
+                        <option value="" disabled selected>Select Specified Skilled Worker Test</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <select id="level" name="level" required>
+                        <option value="" disabled selected>Select Level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="strong-point">長所/Strong Point:</label>
+                <textarea id="strong-point" name="strong-point" rows="4" placeholder="Strong Point"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="weak-point">短所/Weak Point:</label>
+                <textarea id="weak-point" name="weak-point" rows="4" placeholder="Weak Point"></textarea>
+            </div>
+            <!-- Add other skills and abilities fields here -->
+            <button id="next-skills2">次へ/Next</button>
+        </form>
+
+        <!-- Skill and Abilities Information -->
+        <form id="skills2-form" style="display: none;">
+            <h2>Skills and Abilities</h2>
+            <div class="form-group">
+                <label for="driving">車運転/Driving:</label>
+                <div class="radio-group">
+                    <input type="radio" id="driving-yes" name="driving" value="yes" required>
+                    <label for="driving-yes">有/Yes</label>
+                    <input type="radio" id="driving-no" name="driving" value="no" required>
+                    <label for="driving-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bicycle">自転車/Bicycle:</label>
+                <div class="radio-group">
+                    <input type="radio" id="bicycle-yes" name="bicycle" value="yes" required>
+                    <label for="bicycle-yes">有/Yes</label>
+                    <input type="radio" id="bicycle-no" name="bicycle" value="no" required>
+                    <label for="bicycle-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cooking">料理/Cooking:</label>
+                <div class="radio-group">
+                    <input type="radio" id="cooking-yes" name="cooking" value="yes" required>
+                    <label for="cooking-yes">有/Yes</label>
+                    <input type="radio" id="cooking-no" name="cooking" value="no" required>
+                    <label for="cooking-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="visa-applied">在留資格申請歴/Applied Visa to Japan?</label>
+                <div class="radio-group">
+                    <input type="radio" id="visa-applied-yes" name="visa-applied" value="yes" required>
+                    <label for="visa-applied-yes">有/Yes</label>
+                    <input type="radio" id="visa-applied-no" name="visa-applied" value="no" required>
+                    <label for="visa-applied-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>申請ビザ類/Type of Visa applied?</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="visa-type-1" name="visa-type-1" value="type1">
+                    <label for="visa-type-1">留学/Student</label>
+                    <input type="checkbox" id="visa-type-2" name="visa-type-2" value="type2">
+                    <label for="visa-type-2">就労/Work</label>
+                    <input type="checkbox" id="visa-type-3" name="visa-type-3" value="type3">
+                    <label for="visa-type-3">実習生TITP</label>
+                    <!-- Add more checkboxes as needed -->
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="desired-period">希望在留期間/Desired period in Japan:</label>
+                <input type="text" id="desired-period" name="desired-period" placeholder="Desired period in Japan"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="plan-after-return">帰国後の仕事/Plan after coming back:</label>
+                <textarea id="plan-after-return" name="plan-after-return" placeholder="Plan after coming back" rows="4"
+                    style="resize: none;" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="reason-for-working">希望動機/Reason for Working in Japan:</label>
+                <textarea id="reason-for-working" name="reason-for-working" placeholder="Reason for Working in Japan"
+                    rows="4" style="resize: none;" required></textarea>
+            </div>
+            <!-- Add other skills and abilities fields here -->
+            <button id="next-edu">次へ/Next</button>
+        </form>
+
+        <!-- Education -->
+        <form id="education-form" style="display: none;">
+            <h2>Education</h2>
+            <div class="form-group" id="education-section">
+                <div class="education-list"></div>
+                <div class="section-border">
+                    <div class="form-group">
+                        <div class="education-group">
+                            <div class="education-field">
+                                <label for="started">入学年月/Started:</label>
+                                <input type="text" id="started" name="started" placeholder="Started" required>
+                            </div>
+                            <div class="education-field">
+                                <label for="finished">卒業/Finished:</label>
+                                <input type="text" id="finished" name="finished" placeholder="Finished" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="school-name">学校名/School Name:</label>
+                        <input type="text" id="school-name" name="school-name" placeholder="School Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">専門/Major:</label>
+                        <input type="text" id="major" name="major" placeholder="Major" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">資格/Degree:</label>
+                        <input type="text" id="degree" name="degree" placeholder="Degree" required>
+                    </div>
+                </div>
+            </div>
+            <div id="addMore">
+                <span class="add-more" onclick="addEducationField()">+ Add More</span>
+            </div>
+            <button id="next-work">次へ/Next</button>
+        </form>
+
+
+        <!-- Work Experience -->
+        <form id="work-form" style="display: none;">
+            <h2>Work Experience</h2>
+            <div class="form-group" id="work-section">
+                <div class="work-list"></div>
+                <div class="section-border">
+                    <div class="form-group">
+                        <div class="work-group">
+                            <div class="work-field">
+                                <label for="started">開始年月/Started:</label>
+                                <input type="text" id="started" name="started" placeholder="Started" required>
+                            </div>
+                            <div class="work-field">
+                                <label for="finished">終了/Finished:</label>
+                                <input type="text" id="finished" name="finished" placeholder="Finished" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">社名/CompanyName:</label>
+                        <input type="text" id="company-name" name="company-name" placeholder="CompanyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-type">仕事内容/Type of Job:</label>
+                        <input type="text" id="job-type" name="job-type" placeholder="Type of Job" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">市名/City:</label>
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                    </div>
+                </div>
+            </div>
+            <div id="addMore">
+                <span class="add-more" onclick="addWorkField()">+ Add More</span>
+            </div>
+            <button id="next-family">次へ/Next</button>
+        </form>
+
+        <!-- Family -->
+        <form id="family-form" style="display: none;">
+            <h2>Family</h2>
+            <div class="form-group" id="family-section">
+                <div class="family-list"></div>
+                <div class="section-border">
+                    <div class="form-group">
+                        <label for="name">氏名/Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="relation">続柄/Relation:</label>
+                        <div class="select-group">
+                            <select id="relation" name="relation" required>
+                                <option value="" disabled selected>Select Relation</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="child">Child</option>
+                                <option value="parent">Parent</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">年齢/Age:</label>
+                        <input type="text" id="age" name="age" placeholder="Age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="work">職業/Work:</label>
+                        <input type="text" id="work" name="work" placeholder="Work" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">現住所/Address:</label>
+                        <textarea id="address" name="address" placeholder="Address" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel-no">電話番号/Tel No:</label>
+                        <input type="tel" id="tel-no" name="tel-no" placeholder="Tel No" required>
+                    </div>
+                </div>
+            </div>
+            <div id="addMore">
+                <span class="add-more" onclick="addFamilyField()">+ Add More</span>
+            </div>
+            <button id="next-finish">次へ/Next</button>
+        </form>
+        <div id="back-link" class="hidden">
+            <a href="#" id="back">戻り/Back</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
